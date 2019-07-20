@@ -22,6 +22,7 @@ const _inheritFields = (config) => {
         type: arg.type,
         defaultValue: arg.defaultValue,
         description: arg.description,
+        astNode: arg.astNode,
       };
     });
     parentFields[field].args = newArgs;
