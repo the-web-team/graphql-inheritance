@@ -4,7 +4,5 @@ module.exports = {
     'transform-object-rest-spread',
     'transform-es2015-modules-commonjs',
   ],
-  'presets': [
-    'env',
-  ],
+  "presets": ["@babel/env"],
 };
