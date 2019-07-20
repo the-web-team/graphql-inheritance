@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    ["transform-class-properties", { "spec": true }],
+    ["transform-object-rest-spread", { "spec": true }],
+    ["transform-es2015-modules-commonjs", { "spec": true }]
+  ],
+  "presets": [
+    "env"
+  ]
+}

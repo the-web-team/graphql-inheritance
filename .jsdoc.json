@@ -1,0 +1,22 @@
+{
+  "plugins": [],
+  "source": {
+    "include": [
+      "./lib",
+      "./README.md"
+    ],
+    "includePattern": ".+\\.(js|md)?$",
+    "excludePattern": ".+\\.test.js?$"
+  },
+  "sourceType": "module",
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "opts": {
+    "template": "./node_modules/loke-jsdoc-theme",
+    "encoding": "utf8",
+    "destination": "./docs/",
+    "recurse": "true"
+  }
+}
