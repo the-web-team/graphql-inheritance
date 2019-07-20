@@ -1,8 +1,8 @@
 module.exports = {
   plugins: [
     'transform-class-properties',
-    'transform-object-rest-spread',
     'transform-es2015-modules-commonjs',
+    '@babel/plugin-proposal-object-rest-spread',
   ],
   "presets": ["@babel/env"],
 };
