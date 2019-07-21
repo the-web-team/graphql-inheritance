@@ -25,6 +25,17 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths: .
+  build:
+    <<: *defaults
+    steps:
+      - attach_workspace
+          at: ~/repo
+      - run:
+          name: Build
+          command: yarn build
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
   deploy:
     <<: *defaults
     context: NPM_REGISTRY
@@ -40,6 +51,9 @@ workflows:
   only_test:
     jobs:
       - test
+      - build
+          requires:
+            - test
       - deploy
         requires:
-          - test
+          - build
