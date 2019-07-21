@@ -1,5 +1,8 @@
 <!--- Provide a general summary of your changes in the Title above -->
 
+## How does this PR make you feel?
+!()[GIPHY_URL]
+
 ## Description
 <!--- Describe your changes in detail -->
 
