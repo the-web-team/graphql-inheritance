@@ -39,7 +39,6 @@ jobs:
           paths: .
   deploy:
     <<: *defaults
-    context: NPM_REGISTRY
     steps:
       - attach_workspace:
           at: ~/repo
@@ -59,6 +58,7 @@ workflows:
       - test
       - build
       - deploy:
+          context: NPM_REGISTRY
           requires:
             - test
             - build
