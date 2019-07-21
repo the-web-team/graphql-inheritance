@@ -51,9 +51,9 @@ workflows:
   only_test:
     jobs:
       - test
-      - build
+      - build:
           requires:
             - test
-      - deploy
-        requires:
-          - build
+      - deploy:
+          requires:
+            - build
