@@ -25,9 +25,19 @@ jobs:
       - persist_to_workspace:
           root: ~/repo
           paths: .
+  deploy:
+    <<: *defaults
+    context: NPM_REGISTRY
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - run:
+          name: Publish package
+          command: npm publish
 
 workflows:
   version: 2
   only_test:
     jobs:
       - test
+      - deploy
